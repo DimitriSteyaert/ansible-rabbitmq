@@ -1,0 +1,5 @@
+---
+# General RabbitMQ parameters that apply to this role itself
+rabbitmq_version: latest
+rabbitmq_server_state: present
+rabbitmq_server_purge: no

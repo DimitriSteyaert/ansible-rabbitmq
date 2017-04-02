@@ -1,0 +1,16 @@
+---
+- name: Install latest version of RabbitMQ
+  apt:
+    name: rabbitmq-server
+    state: "{{ rabbitmq_server_state }}"
+    purge: "{{ rabbitmq_server_purge }}"
+  when:
+    - rabbitmq_version == "latest"
+
+- name: Install specific version of RabbitMQ
+  apt:
+    name: "rabbitmq-server={{ rabbitmq_version }}"
+    state: "{{ rabbitmq_server_state }}"
+    purge: "{{ rabbitmq_server_purge }}"
+  when:
+    - rabbitmq_version != "latest"
