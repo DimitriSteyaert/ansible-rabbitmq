@@ -3,3 +3,10 @@
 rabbitmq_version: latest
 rabbitmq_server_state: present
 rabbitmq_server_purge: no
+rabbitmq_ulimit: 65536
+
+# Rabbitmq config parameters
+rabbitmq_amqp_port: 5672
+rabbitmq_epmd_port: 4369
+rabbitmq_node_port: 25672
+rabbitmq_memory_high_watermark: 0.5
