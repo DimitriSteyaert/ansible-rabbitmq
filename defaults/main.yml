@@ -12,7 +12,7 @@ rabbitmq_node_port: 25672
 rabbitmq_memory_high_watermark: 0.5
 rabbitmq_disk_free_limit: 1GB
 rabbitmq_queue_master_locator: min-masters
-rabbitmq_hipe_compile: "true"
+rabbitmq_hipe_compile: "false"
 
 # RabbitMQ plugins
 rabbitmq_plugins:
@@ -27,3 +27,9 @@ rabbitmq_vhosts: []
 rabbitmq_users: []
 rabbitmq_queues: []
 rabbitmq_exchanges: []
+
+# RabbitMQ cluster parameters
+rabbitmq_cluster: false
+rabbitmq_cluster_master: false
+rabbitmq_master: your_cluster_master
+rabbitmq_erlang_cookie: NEPTQRGCQDKAHSOSFDML

@@ -31,6 +31,7 @@
     login_user: "{{ item.login_user }}"
     login_password: "{{ item.login_password }}"
     durable: "{{ item.durable|default('true') }}"
+  ignore_errors: true
   with_items: "{{ rabbitmq_queues }}"
 
 - name: Manage the exchanges
@@ -42,4 +43,5 @@
     login_password: "{{ item.login_password }}"
     exchange_type: "{{ item.exchange_type }}"
     durable: "{{ item.durable|default('true') }}"
+  ignore_errors: true
   with_items: "{{ rabbitmq_exchanges }}"

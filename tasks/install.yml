@@ -15,6 +15,11 @@
   when:
     - rabbitmq_version != "latest"
 
+- name: Install the Python requests library
+  apt:
+    name: python-requests
+    state: present
+
 - name: Install the Erlang hipe package to use hipe_compile
   apt:
     name: erlang-base-hipe
