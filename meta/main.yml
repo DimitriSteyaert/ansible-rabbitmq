@@ -1,0 +1,33 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: 'Dimitri Steyaert'
+  description: 'Install RabbitMQ on your machine and optionally configure a cluster.'
+  company: 'Steyaert Web Services'
+  license: 'MIT'
+  min_ansible_version: '1.9'
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+        - yakkety
+        - zesty
+    - name: Debian
+      versions:
+        - wheezy
+        - jessie
+  galaxy_tags:
+    - clustering
+    - messaging
+    - rabbitmq
+
+ansigenome_info:
+  galaxy_id: 'DimitriSteyaert'
+  travis: False
+  synopsis: |
+    This role installs and configures a RabbitMQ server (with the version of your choice) and lets you setup a RabbitMQ cluster.
+  usage: |
+    If you just enable this role on your machine(s) then you perform a basic RabbitMQ server installation with the latest version. But by tweaking the role variables you can choose to install another version of RabbitMQ server or setup a RabbitMQ cluster. You can also choose to let Ansible manage your vhosts, queues, exchanges and users by filling up these arrays. Just follow the examples below to realise this.
